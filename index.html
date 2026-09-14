@@ -8,13 +8,12 @@
     name="viewport"
     content="width=device-width, initial-scale=1.0"
   >
-
-  <title>Daily Report</title>
   <link rel="stylesheet" href="index3.css">
+  <title>Daily Report</title>
 </head>
 <body>
 <button type="button" id="themeToggleBtn" style="margin-bottom: 15px; padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--card-bg); color: var(--text-color); cursor: pointer;">
-  <span id="themeIcon">🌙</span> / <span id="themeText">โหมดมืด</span>
+  <span id="themeIcon">☀️</span> / <span id="themeText">โหมดสว่าง</span>
 </button>
   <h1>Daily Report</h1>
 
@@ -174,10 +173,15 @@
 
     // ฟังก์ชันอัปเดตข้อความบนปุ่ม
     function updateButtonUI(isDark) {
-      if (isDark) {
+      if (!isDark) {
+        // themeIcon.textContent = '🌙';
+        // themeText.textContent = 'โหมดมืด';
         themeIcon.textContent = '☀️';
         themeText.textContent = 'โหมดสว่าง';
+
       } else {
+        // themeIcon.textContent = '☀️';
+        // themeText.textContent = 'โหมดสว่าง';
         themeIcon.textContent = '🌙';
         themeText.textContent = 'โหมดมืด';
       }
@@ -202,7 +206,6 @@
       updateButtonUI(isDark);
     });
   </script>
-
 </body>
 
 </html>
